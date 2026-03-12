@@ -1275,7 +1275,7 @@ var html='<div class="kr k4" style="margin-bottom:16px">'+ringHTML
   +'<div class="card csm csm-accent csm-blue"><div class="ct">Clubs Active</div><div class="kv" style="color:var(--blue)">'+activeClubs+'</div></div>'
   +'</div>';
 
-html+='<div class="tkt-layout"><div class="card" style="padding:14px"><div class="ct" style="margin-bottom:10px">Club Locations &amp; Ticket Usage</div><div class="tkt-map-wrap"><div id="tkt-map"></div></div></div><div class="card" style="padding:14px"><div class="ct" style="margin-bottom:10px">Ticket Usage by Club</div><div class="tkt-bar-section" id="tkt-bar-wrap" style="height:auto;padding:8px 4px;overflow-y:auto;max-height:620px"></div></div></div>\';
+html+='<div class="tkt-layout"><div class="card" style="padding:14px"><div class="ct" style="margin-bottom:10px">Club Locations &amp; Ticket Usage</div><div class="tkt-map-wrap"><div id="tkt-map"></div></div></div><div class="card" style="padding:14px"><div class="ct" style="margin-bottom:10px">Ticket Usage by Club</div><div class="tkt-bar-section" id="tkt-bar-wrap" style="height:auto;padding:8px 4px;overflow-y:auto;max-height:620px"></div></div></div>';
 
 var sortedClubs=[].concat(clubRows).sort(function(a,b){return(pNum(b[totalUsedCol])||0)-(pNum(a[totalUsedCol])||0);});
 var dispCols=[gaUsedCol,hospUsedCol,totalUsedCol,gaAllocCol,hospAllocCol,gaLeftCol,hospLeftCol].filter(Boolean);
