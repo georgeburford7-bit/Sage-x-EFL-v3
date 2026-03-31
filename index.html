@@ -666,6 +666,15 @@ function attemptLogin(){
         });
       }
     }catch(e){}
+    // Log login to Google Sheet
+    try{
+      fetch('https://script.google.com/macros/s/AKfycbzvonHmErzwYeIUOwflGyWyIc2Opcy5hiacCAK9sDwnEtEi1w92L90tEjI9mR3Qea93/exec',{
+        method:'POST',
+        mode:'no-cors',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({email:email,timestamp:new Date().toISOString()})
+      });
+    }catch(e){}
     showHub();
   } else {
     err.textContent='Incorrect email or password.';
